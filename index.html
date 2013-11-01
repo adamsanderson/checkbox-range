@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<title>Checkbox Range Demo</title>
+  	
+  	<meta name="author" content="Adam Sanderson">
+    <style type="text/css" media="screen">
+      body {
+        padding: 20px;
+        font-family: sans-serif;
+        background: white;
+      }
+      
+      .hint {
+        background: #ffe;
+        display: inline-block;
+      }
+      
+      .check-list {
+        margin: 1em 0;
+      }
+      
+      .check-row {
+        display: block;
+        padding: 0.25em;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Checkbox Range</h1>
+    <p>Please select your favorite animals</p>
+    <p class='hint'>Hold shift to select a range</p>
+    <div class='check-list'>
+      <label class='check-row'><input type='checkbox'/>Octopus</label>
+      <label class='check-row'><input type='checkbox'/>Ocelot</label>
+      <label class='check-row'><input type='checkbox'/>Orangutang</label>
+      <label class='check-row'><input type='checkbox'/>Orca</label>
+      <label class='check-row'><input type='checkbox'/>Okapi</label>
+      <label class='check-row'><input type='checkbox'/>Opossum</label>
+      <label class='check-row'><input type='checkbox'/>Otter</label>
+    </div>
+    
+    <footer>
+      See the <a href='https://github.com/adamsanderson/checkbox-range/'>GitHub repository</a> for more information.
+    </footer>
+    <script src="build/build.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      var checkboxRange = require('checkbox-range');
+      var list = document.querySelector('.check-list');
+
+      checkboxRange(list);
+    </script>
+  </body>
+</html>

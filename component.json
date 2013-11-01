@@ -1,0 +1,15 @@
+{
+  "name": "checkbox-range",
+  "repo": "adamsanderson/checkbox-range",
+  "description": "Support shift clicking to select a range of checkboxes.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/event": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
