@@ -21,6 +21,10 @@
   Now whenever a user holds shift, they will select or deselect all the checkboxes, just like a text or file selection.
   
   Each checkbox range is independent, so selections will not span multiple checkbox ranges.
+  
+## Supported Browsers
+  
+  This is a work in progress, Chrome works just fine, but other browsers need some work.
 
 ## License
 
