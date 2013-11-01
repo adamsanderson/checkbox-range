@@ -18,6 +18,11 @@
         display: inline-block;
       }
       
+      .example {
+        width: 400px;
+        float: left;
+      }
+      
       .check-list {
         margin: 1em 0;
       }
@@ -27,20 +32,40 @@
         padding: 0.25em;
       }
       
+      footer {
+        clear: left;
+      }
+      
     </style>
   </head>
   <body>
     <h1>Checkbox Range</h1>
-    <p>Please select your favorite animals</p>
-    <p class='hint'>Hold shift to select a range</p>
-    <div class='check-list'>
-      <label class='check-row'><input type='checkbox'/>Octopus</label>
-      <label class='check-row'><input type='checkbox'/>Ocelot</label>
-      <label class='check-row'><input type='checkbox'/>Orangutang</label>
-      <label class='check-row'><input type='checkbox'/>Orca</label>
-      <label class='check-row'><input type='checkbox'/>Okapi</label>
-      <label class='check-row'><input type='checkbox'/>Opossum</label>
-      <label class='check-row'><input type='checkbox'/>Otter</label>
+    <div class='example'>
+      <p>Please select your favorite animals</p>
+      <p class='hint'>Hold shift to select a range</p>
+      <div class='check-list'>
+        <label class='check-row'><input type='checkbox'/>Octopus</label>
+        <label class='check-row'><input type='checkbox'/>Ocelot</label>
+        <label class='check-row'><input type='checkbox'/>Orangutang</label>
+        <label class='check-row'><input type='checkbox'/>Orca</label>
+        <label class='check-row'><input type='checkbox'/>Okapi</label>
+        <label class='check-row'><input type='checkbox'/>Opossum</label>
+        <label class='check-row'><input type='checkbox'/>Otter</label>
+      </div>
+    </div>
+    
+    <div class='example'>
+      <p>Please select your favorite fees</p>
+      <p class='hint'>You can also deselect items</p>
+      <div class='check-list'>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Shipping</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Taxes</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Service Charges</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Convenience Fees</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Checkbox Handling</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Hidden Fees</label>
+        <label class='check-row'><input type='checkbox' checked='checked'/>Withdrawal Fees</label>
+      </div>
     </div>
     
     <footer>
@@ -49,9 +74,11 @@
     <script src="build/build.js" type="text/javascript" charset="utf-8"></script>
     <script>
       var checkboxRange = require('checkbox-range');
-      var list = document.querySelector('.check-list');
-
-      checkboxRange(list);
+      var lists = document.querySelectorAll('.check-list');
+      
+      for (var i=0; i < lists.length; i++) {
+        checkboxRange(lists[i]);
+      }
     </script>
   </body>
 </html>
