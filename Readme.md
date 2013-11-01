@@ -2,6 +2,8 @@
 # checkbox-range
 
   Support shift clicking to select a range of checkboxes.
+  
+  [Try the demo](http://adamsanderson.github.io/checkbox-range/) if you're curious.
 
 ## Installation
 
@@ -23,3 +25,7 @@
 ## License
 
   MIT
+
+---
+
+Adam Sanderson (http://monkeyandcrow.com)
