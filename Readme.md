@@ -24,7 +24,7 @@
   
 ## Supported Browsers
   
-  This is a work in progress, Chrome works just fine, but other browsers need some work.
+  Chrome and IE8+ should work just fine.  Firefox works, but only if the user shift clicks on a checkbox, not a label.  This is due to a [long outstanding bug](https://bugzilla.mozilla.org/show_bug.cgi?id=559506).
 
 ## License
 

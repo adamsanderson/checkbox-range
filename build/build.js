@@ -236,7 +236,7 @@ function checkboxRange(root) {
   var lastInput;
   
   events.bind(root, "click", function(event){
-    var input = event.srcElement;
+    var input = event.target || event.srcElement;
     var checked;
     
     if (isCheckbox(input)) {
@@ -247,6 +247,11 @@ function checkboxRange(root) {
       
       lastInput = input;
     }
+  });
+  
+  // Prevent IE8 from selecting text between the checkboxes when shift clicking
+  events.bind(root, "selectstart", function(event){
+    return !event.shiftKey;
   });
 }
 
